@@ -1,0 +1,29 @@
+{
+  "name": "iframe-resize",
+  "version": "0.1.0",
+  "description": "Test iframe resize.",
+  "main": "test-iframes.html",
+  "scripts": {
+    "push": "git push",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "test",
+    "iframe",
+    "resize"
+  ],
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "author": "uid-11222",
+  "homepage": "https://github.com/uid-11222/iframe-resize",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uid-11222/iframe-resize"
+  },
+  "bugs": {
+    "url": "https://github.com/uid-11222/iframe-resize/issues"
+  },
+  "license": "MIT"
+}

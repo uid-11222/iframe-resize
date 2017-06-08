@@ -1,0 +1,58 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Iframe resize</title>
+  <style>
+   #container iframe {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+     opacity: 0;
+   }
+   #container {
+     padding: 8px;
+     background-color: #999;
+     position: relative;
+   }
+  </style>
+  <script>
+   'use strict';
+   (function() {
+     var div = document.createElement('DIV');
+     var html = 'x<iframe src="javascript:false"></iframe>';
+     div.innerHTML = html;
+     var ifr = div.lastChild;
+     var count = 0;
+
+     window.onload = function() {
+       container.appendChild(ifr);
+       addContentBtn.onclick = addContent;
+       ifr.contentWindow.onresize = function() {
+         /**
+          * Skip first resize (fired after iframe "onload" image).
+          */
+         if (count) {
+           onResize();
+         }
+       };
+     };
+
+     function addContent() {
+       var p = document.createElement('P');
+       p.innerHTML = 'Content ' + ++count;
+       container.appendChild(p);
+     }
+
+     function onResize() {
+       var p = document.createElement('P');
+       p.innerHTML = '[ Resize ' + count + ' ] ';
+       document.body.appendChild(p);
+     }
+   })();
+  </script>
+</head>
+<p>
+  <button id="addContentBtn">Add content</button>
+  <div id="container"></div>
+</p>

@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Test Iframe</title>
+  <style>
+    iframe {
+      width: 350px;
+      height: 600px;
+    }
+  </style>
+  <script>
+   'use strict';
+   (function() {
+     var div = document.createElement('DIV');
+     var html = 'x<iframe src="resize-iframe.html"></iframe>';
+     div.innerHTML = html;
+     var ifr = div.lastChild;
+
+     window.onload = function() {
+       document.body.appendChild(ifr);
+     };
+
+   })();
+  </script>
+</head>
+<p>
+  <span style="display: inline-block; width: 350px;">Static inner iframe</span>
+  <span>Dinamic inner iframe</span>
+</p>
+<iframe src="resize-iframe.html"></iframe>
