@@ -30,11 +30,12 @@
        addContentBtn.onclick = addContent;
        ifr.contentWindow.onresize = function() {
          /**
-          * Skip first resize (fired after iframe "onload" image).
+          * Skip first resize (fired after iframe "onload" event).
           */
-         if (count) {
-           onResize();
+         if (count === 0) {
+           return;
          }
+         onResize();
        };
      };
 
