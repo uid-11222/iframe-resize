@@ -2,7 +2,6 @@
   "name": "iframe-resize",
   "version": "0.1.0",
   "description": "Test iframe resize.",
-  "main": "test-iframes.html",
   "scripts": {
     "push": "git push",
     "start": "node server.js"
