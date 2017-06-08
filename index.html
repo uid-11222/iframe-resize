@@ -4,9 +4,16 @@
   <title>Test Iframe</title>
   <style>
     iframe {
-      width: 350px;
       height: 600px;
     }
+
+   .static-text {
+     display: inline-block;
+   }
+
+   iframe, .static-text {
+     width: 350px;
+   }
   </style>
   <script>
    'use strict';
@@ -23,8 +30,12 @@
    })();
   </script>
 </head>
+<span>
+  Outer iframes src:
+    <a href="resize-iframe.html" target="blank">resize-iframe.html</a>
+</span>
 <p>
-  <span style="display: inline-block; width: 350px;">Static inner iframe</span>
-  <span>Dinamic inner iframe</span>
+  <span class="static-text">Static outer iframe</span>
+  <span>Dinamic outer iframe</span>
 </p>
 <iframe src="resize-iframe.html"></iframe>
