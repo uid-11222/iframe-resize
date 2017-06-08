@@ -12,7 +12,7 @@ $ npm start
 ```
 Open http://localhost:3000 .
 
-Click *Add content* button to increase container height.
+Click **Add content** button to increase container height.
 
 Resizing iframe url: http://localhost:3000/resize-iframe.html .
 
